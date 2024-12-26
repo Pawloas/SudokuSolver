@@ -8,15 +8,6 @@ namespace SudokuSolver
 		private Dictionary<byte, byte[]> _getRowBoxes;
 		private Dictionary<byte, byte[]> _getColumnBoxes;
 
-		internal Sudoku(List<Box> sudoku)
-		{
-			if (sudoku.Count != 9)
-				throw new ArgumentException($"Each sudoku must have 9 boxes !!");
-
-			this._sudoku = sudoku;
-			_getRowBoxes = InitializeRowBoxes();
-			_getColumnBoxes = InitializeColumnBoxes();
-		}
 
 		internal Sudoku(List<List<char>> sudoku)
 		{
@@ -88,7 +79,6 @@ namespace SudokuSolver
 
 			cell.value = 0;
 		}
-
 		internal void Print()
 		{
 			ConsoleColor constantColor = ConsoleColor.Red;
@@ -347,6 +337,5 @@ namespace SudokuSolver
 			
 			return new Tuple<byte, byte>(100, 100);
 		}
-
 	}
 }

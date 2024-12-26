@@ -32,6 +32,7 @@
 
 			return false;
 		}
+
 		internal List<Cell> CellsByRow(byte row)
 		{
 			if (row >= 9)
@@ -51,6 +52,7 @@
 					throw new ArgumentException($"Code should not run into this part !");
 			}
 		}
+
 		internal List<Cell> CellsByColumn(byte column)
 		{
 			if (column >= 9)

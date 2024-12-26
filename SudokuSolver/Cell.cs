@@ -13,7 +13,6 @@
 			this.value = 0;
 			this.type = CellType.Constant;
 		}
-
 		internal Cell(byte value, CellType type)
 		{
 			this.value = value;
@@ -24,7 +23,6 @@
 		{
 			return value != 0;
 		}
-
 		internal bool HasNotValue()
 		{
 			return HasValue() == false;
